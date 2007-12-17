@@ -18,7 +18,6 @@ Buildrequires:	mgcomp
 Buildrequires:	perl-tag_utils
 Buildrequires:	libxslt-proc
 Buildrequires:  perl(Parse::RecDescent)
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 A new small preliminary example of a French grammar generated from a
