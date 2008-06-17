@@ -18,6 +18,8 @@ Buildrequires:	mgcomp
 Buildrequires:	perl-tag_utils
 Buildrequires:	libxslt-proc
 Buildrequires:  perl(Parse::RecDescent)
+#depends on dyalog which doesn't exist on x86_64
+ExclusiveArch: %ix86
 Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
