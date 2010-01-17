@@ -1,6 +1,7 @@
 %define name	frmg
-%define version	1.0.0
-%define release	%mkrel 9
+%define version	1.2.0
+%define release	%mkrel 1
+%define _disable_ld_as_needed 1  
 
 Name:		%{name}
 Version:	%{version}
@@ -8,8 +9,8 @@ Release:	%{release}
 Summary:	Small preliminary example of a French grammar based on DyAlog
 License:	GPL
 Group:		Sciences/Computer science
-Source:		ftp://ftp.inria.fr/INRIA/Projects/Atoll/Eric.Clergerie/TAG/%{name}-%{version}.tar.bz2
-Url:		http://atoll.inria.fr/packages/packages.html#frmg
+Url:		http://mgkit.gforge.inria.fr/
+Source:		https://gforge.inria.fr/frs/download.php/5681/%{name}-%{version}.tar.gz
 Buildrequires:	dyalog
 Buildrequires:	dyalog-xml-devel
 Buildrequires:	dyalog-sqlite-devel
@@ -17,7 +18,7 @@ Buildrequires:	mgtools
 Buildrequires:	mgcomp
 Buildrequires:	perl-tag_utils
 Buildrequires:	libxslt-proc
-Buildrequires:  perl(Parse::RecDescent)
+Buildrequires:  perl(Parse::Eyapp)
 #depends on dyalog which doesn't exist on x86_64
 ExclusiveArch: %ix86
 Buildroot:	%{_tmppath}/%{name}-%{version}
@@ -52,13 +53,13 @@ A mod_perl-based viewer for %{name}.
 
 %build
 export LD_LIBRARY_PATH=%{_libdir}/DyALog
-%configure --with-modperldir=%{_var}/www/perl
+%configure2_5x --with-modperldir=%{_var}/www/perl
 # parallel build is broken
 make
 
 %install
 rm -rf %{buildroot}
-%makeinstall_std
+%makeinstall_std REGISTER=/bin/true
 
 %clean
 rm -rf %{buildroot}
@@ -69,6 +70,7 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/%{name}.conf
 %{_bindir}/*
 %{_datadir}/%{name}
+%{_libdir}/pkgconfig/frmg.pc
 
 %files viewer
 %defattr(-,root,root)
