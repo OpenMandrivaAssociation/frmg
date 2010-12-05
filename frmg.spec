@@ -1,6 +1,6 @@
 %define name	frmg
 %define version	1.2.0
-%define release	%mkrel 1
+%define release	%mkrel 2
 %define _disable_ld_as_needed 1  
 
 Name:		%{name}
