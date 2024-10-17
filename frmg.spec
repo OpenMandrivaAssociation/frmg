@@ -9,7 +9,7 @@ Release:	%{release}
 Summary:	Small preliminary example of a French grammar based on DyAlog
 License:	GPL
 Group:		Sciences/Computer science
-Url:		http://mgkit.gforge.inria.fr/
+Url:		https://mgkit.gforge.inria.fr/
 Source:		https://gforge.inria.fr/frs/download.php/5681/%{name}-%{version}.tar.gz
 Buildrequires:	dyalog
 Buildrequires:	dyalog-xml-devel
