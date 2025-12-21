@@ -11,6 +11,11 @@ License:	GPL
 Group:		Sciences/Computer science
 Url:		https://mgkit.gforge.inria.fr/
 Source:		https://gforge.inria.fr/frs/download.php/5681/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 Buildrequires:	dyalog
 Buildrequires:	dyalog-xml-devel
 Buildrequires:	dyalog-sqlite-devel
