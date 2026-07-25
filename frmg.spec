@@ -1,6 +1,6 @@
 %define name	frmg
 %define version	1.2.0
-%define release	%mkrel 2
+%define release 3
 %define _disable_ld_as_needed 1  
 
 Name:		%{name}
@@ -33,7 +33,7 @@ A new small preliminary example of a French grammar generated from a
 MetaGrammar and compiled with DyALog
 
 It is based on a previous MetaGrammar (frenchmg), itself based on an previous
-version developed by Lionel Clément.
+version developed by Lionel Clï¿½ment.
 
 A new simplified notation is been used to simplify the writing of the
 MetaGrammar, with still conversion to an XML exchange format.
